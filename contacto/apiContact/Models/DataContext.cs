@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace apiContact.Models
+﻿namespace apiContact.Models
 {
-    public class DataContext
+    using System.Data.Entity;
+
+    public class DataContext:DbContext
     {
+        public DataContext():base("DefaultConnection")
+        {
+                
+        }
+
+        public System.Data.Entity.DbSet<apiContact.Models.Contact> Contacts { get; set; }
     }
 }
