@@ -1,4 +1,5 @@
-﻿using System;
+﻿using appContacto.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace appContacto
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ListViewContact();
         }
 
         protected override void OnStart()
